@@ -81,3 +81,6 @@ SingleM and Sandpiper: Robust microbial taxonomic profiles from metagenomic data
 The <code>microbial_fraction</code> module of SingleM:
 
 Eisenhofer, Raphael, Antton Alberdi, and Ben J. Woodcroft. Large-scale estimation of bacterial and archaeal DNA prevalence in metagenomes reveals biome-specific patterns. bioRxiv (2024): 2024-05. https://doi.org/10.1101/2024.05.16.594470
+
+## Citation of MFD manuscript:
+Microflora Danica: the atlas of Danish environmental microbiomes., CM Singleton, TBN Jensen, F Delogu, EA Sørensen, VR Jørgensen, SM Karst, Y Yang, KS Knudsen, M Sereika, F Petriglieri, S Knutsson, SM Dall, RH Kirkegaard, JM Kristensen, BJ Woodcroft, DR Speth, STN Aroney, The Microflora Danica Consortium, M Wagner, MKD Dueholm, PH Nielsen, M Albertsen., bioRxiv 2024.06.27.600767; doi: https://doi.org/10.1101/2024.06.27.600767
