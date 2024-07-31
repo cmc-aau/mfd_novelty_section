@@ -17,27 +17,59 @@ R scripts used for generating SingleM-related plots (eg., Figure 5a, Figure 5b, 
 Taking "sample1" and metapackage "uhgg_smag_spire_oceans_gems.smpkg" as an example:
 ### 1. SingleM microbial profiling: SingleM pipe metagenome
 ```
-singlem pipe -1 /PATH_TO_FORWARD_READ/sample1_trimmed.fastq.gz -2 /PATH_TO_REVERSE_READ/sample1_trimmed.fastq.gz --otu-table sample1.otu_table.csv --threads 10 --metapackage /PATH_TO_FILE/uhgg_smag_spire_oceans_gems.smpkg --archive-otu-table sample1.otu_table.csv.archive --taxonomic-profile sample1.condensed_otu_defaultcutoffs
+singlem pipe
+-1 /PATH_TO_FORWARD_READ/sample1_trimmed.fastq.gz
+-2 /PATH_TO_REVERSE_READ/sample1_trimmed.fastq.gz
+--threads 10
+--metapackage /PATH_TO_FILE/uhgg_smag_spire_oceans_gems.smpkg
+--otu-table sample1.otu_table.csv
+--archive-otu-table sample1.otu_table.csv.archive
+--taxonomic-profile sample1.condensed_otu_defaultcutoffs
 ```
 ### 2. SingleM microbial fraction approximation
 ```
-singlem microbial_fraction --input-profile sample1.condensed_otu_defaultcutoffs --output-tsv sample1_readfrac_stdout.tsv --output-per-taxon-read-fractions sample1_readfrac_pertaxon -1 /PATH_TO_FORWARD_READ/sample1_trimmed.fastq.gz -2 /PATH_TO_REVERSE_READ/sample1_trimmed.fastq.gz --metapackage /PATH_TO_FILE/uhgg_smag_spire_oceans_gems.smpkg
+singlem microbial_fraction
+--input-profile sample1.condensed_otu_defaultcutoffs
+--output-tsv sample1_readfrac_stdout.tsv
+--output-per-taxon-read-fractions sample1_readfrac_pertaxon
+-1 /PATH_TO_FORWARD_READ/sample1_trimmed.fastq.gz
+-2 /PATH_TO_REVERSE_READ/sample1_trimmed.fastq.gz
+--metapackage /PATH_TO_FILE/uhgg_smag_spire_oceans_gems.smpkg
 ```
 ### 3. SingleM for MAG recovery of microbial community approximation
 Taking "MAG1" as an example:
 #### 3a. SingleM pipe MAGs
 ```
-singlem pipe --genome-fasta-files /PATH_TO_FILE/MAG1.fa --otu-table MAG1_genome.otu_table.csv --threads 2 --archive-otu-table MAG1_genome.otu_table_archive.csv --taxonomic-profile MAG1_condensed_otu_defaultcutoffs --metapackage /PATH_TO_FILE/uhgg_smag_spire_oceans_gems.smpkg
+singlem pipe
+--genome-fasta-files /PATH_TO_FILE/MAG1.fa
+--otu-table MAG1_genome.otu_table.csv
+--threads 2
+--archive-otu-table MAG1_genome.otu_table_archive.csv
+--taxonomic-profile MAG1_condensed_otu_defaultcutoffs
+--metapackage /PATH_TO_FILE/uhgg_smag_spire_oceans_gems.smpkg
 ```
 #### 3b. SingleM summarise to combine otu tables of all MAGs
 ```
-singlem summarise --input-otu-tables-list /PATH_TO_FILE/ABSOLUTE_FILEPATHS_TO_MAG_OTUTABLES_LIST.txt --output-otu-table genomes.otu_table_combined.csv --metapackage /PATH_TO_FILE/uhgg_smag_spire_oceans_gems.smpkg
+singlem summarise
+--input-otu-tables-list /PATH_TO_FILE/ABSOLUTE_FILEPATHS_TO_MAG_OTUTABLES_LIST.txt
+--output-otu-table genomes.otu_table_combined.csv
+--metapackage /PATH_TO_FILE/uhgg_smag_spire_oceans_gems.smpkg
 ```
 #### 3b. SingleM summarise to combine otu tables of all metagenomes
 ```
-singlem summarise --input-otu-tables-list /PATH_TO_FILE/ABSOLUTE_FILEPATHS_TO_METAGENOME_OTUTABLES_LIST.txt --output-otu-table metagenome_otu_table_combinedotu.txt --metapackage /PATH_TO_FILE/uhgg_smag_spire_oceans_gems.smpkg
+singlem summarise
+--input-otu-tables-list /PATH_TO_FILE/ABSOLUTE_FILEPATHS_TO_METAGENOME_OTUTABLES_LIST.txt
+--output-otu-table metagenome_otu_table_combinedotu.txt
+--metapackage /PATH_TO_FILE/uhgg_smag_spire_oceans_gems.smpkg
 ```
 #### 3c. SingleM appraise
 ```
-singlem appraise --metagenome-otu-tables /PATH_TO_FILE/metagenome_otu_table_combinedotu.txt --genome-otu-tables /PATH_TO_FILE/genomes.otu_table_combined.csv --metapackage /PATH_TO_FILE/uhgg_smag_spire_oceans_gems.smpkg --output-binned-otu-table appraise_binned_otu_table.csv --output-unbinned-otu-table appraise_unbinned_otu_table.csv --output-unaccounted-for-otu-table appraise_unaccounted_for.csv --output-found-in &> singlem_appraise.log &
+singlem appraise
+--metagenome-otu-tables /PATH_TO_FILE/metagenome_otu_table_combinedotu.txt
+--genome-otu-tables /PATH_TO_FILE/genomes.otu_table_combined.csv
+--metapackage /PATH_TO_FILE/uhgg_smag_spire_oceans_gems.smpkg
+--output-binned-otu-table appraise_binned_otu_table.csv
+--output-unbinned-otu-table appraise_unbinned_otu_table.csv
+--output-unaccounted-for-otu-table appraise_unaccounted_for.csv
+--output-found-in &> singlem_appraise.log &
 ```
