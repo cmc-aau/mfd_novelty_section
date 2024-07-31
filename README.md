@@ -73,3 +73,11 @@ singlem appraise
 --output-unaccounted-for-otu-table appraise_unaccounted_for.csv
 --output-found-in &> singlem_appraise.log &
 ```
+## Additional note:
+SingleM results on NCBI datasets come from [Ben J. Woodcroft, et al. (2024) 's work]:(https://doi.org/10.1101/2024.01.30.578060)
+
+SingleM and Sandpiper: Robust microbial taxonomic profiles from metagenomic data., Ben J. Woodcroft, Samuel T. N. Aroney, Rossen Zhao, Mitchell Cunningham, Joshua A. M. Mitchell, Linda Blackall, Gene W. Tyson., bioRxiv 2024.01.30.578060; doi: https://doi.org/10.1101/2024.01.30.578060
+
+The <code>microbial_fraction</code> module of SingleM:
+
+Eisenhofer, Raphael, Antton Alberdi, and Ben J. Woodcroft. Large-scale estimation of bacterial and archaeal DNA prevalence in metagenomes reveals biome-specific patterns. bioRxiv (2024): 2024-05. https://doi.org/10.1101/2024.05.16.594470
