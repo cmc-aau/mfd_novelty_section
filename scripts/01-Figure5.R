@@ -1,4 +1,4 @@
-# This script recreates Figure 5 in the big MfD paper 
+# This script recreates Figure 5a,b in the big MfD paper 
 # Script created and last updated by Yu Yang on Jul 31 2024
 
 # This script includes
