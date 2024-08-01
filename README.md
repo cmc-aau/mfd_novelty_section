@@ -1,5 +1,5 @@
 # mfd_novelty_section
-This repo is part of the [Microflora Danica](https://github.com/cmc-aau/mfd_wiki/wiki) (MFD) project and it reproduces the results from "Section VI: MAGs from Danish habitats double the known species fraction in metagenomes" of the [MFD manuscripts](https://www.biorxiv.org/content/10.1101/2024.06.27.600767v1).
+This repo is part of the [Microflora Danica](https://github.com/cmc-aau/mfd_wiki/wiki) (MFD) project and it reproduces the results from "Section VI: MAGs from Danish habitats double the known species fraction in metagenomes" of the [MFD manuscript](https://www.biorxiv.org/content/10.1101/2024.06.27.600767v1).
 
 ## Input data
 Please download the input file from [Zenodo](). 
