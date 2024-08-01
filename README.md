@@ -6,7 +6,7 @@ Please download the input file from [Zenodo]().
 
 The SingleM metapackakge with GTDB R214 supplemented with other genomes can be downloaded from this [Zenodo](https://zenodo.org/records/12741285).
 
-The SingleM metapackakge with GTDB R214 supplemented with other genomes, together with our short-read (SR) MFD MAGs can be downloaded from this [Zenodo]().
+The SingleM metapackakge with GTDB R214 supplemented with other genomes AND our short-read (SR) MFD MAGs can be downloaded from this [Zenodo]().
 
 ## Codes and scripts
 All SingleM condensed profiles from our big batch samples are merged together using the script: <code>/scripts/00-merge_condensed_singlem_outputs.r</code>. 
