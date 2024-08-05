@@ -8,6 +8,7 @@
 
 library(dplyr)
 library(data.table)
+library(tibble)
 
 ############################################
 ### Merge singlem condensed result files ###
@@ -52,6 +53,11 @@ OTU_table[is.na(OTU_table)] <- 0
 OTU_table2 <- OTU_table %>%
   tibble::column_to_rownames(.,var="taxonomy")%>%
   select(c(-1))
+
+# fix colnames by removing everything after "_R", run only if needed
+colnames(OTU_table2) <- sub("_R.*$", "", colnames(OTU_table2))
+OTU_table <- OTU_table2
+rm(OTU_table2)
 
 ### convert to relative coverage abundances
 OTU_table_rel <- OTU_table %>%
