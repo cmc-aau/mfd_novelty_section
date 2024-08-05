@@ -13,7 +13,7 @@ All SingleM condensed profiles from our big batch samples are merged together us
 
 R scripts used for generating SingleM-related plots (eg., Figure 5a, Figure 5b, Supplementary Figure 6, and Supplementary Figure 7) in the paper are in the folder <code>/scripts</code>.
 
-Codes for generating Figure 5a can be found in this [repo](https://github.com/cmc-aau/mfd_sr_mags).
+Codes for generating Figure 5c can be found in this [repo](https://github.com/cmc-aau/mfd_sr_mags).
 
 ## [SingleM](https://github.com/wwood/singlem) example commands: 
 Taking "sample1" and metapackage "uhgg_smag_spire_oceans_gems.smpkg" as an example:
